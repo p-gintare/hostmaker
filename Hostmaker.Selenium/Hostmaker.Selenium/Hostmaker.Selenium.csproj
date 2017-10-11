@@ -72,9 +72,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Features\WhatYouCanGetCalculationTests.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WhatYouCanGetCalculationTests.feature</DependentUpon>
+    </Compile>
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\WhatYouCanGetCalculationTestsSteps.cs" />
     <Compile Include="Utility\Browser.cs" />
     <Compile Include="Utility\DriverFactory.cs" />
     <Compile Include="Utility\Extensions\WebDriverExtensions.cs" />
@@ -84,6 +90,10 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Features\WhatYouCanGetCalculationTests.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WhatYouCanGetCalculationTests.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
