@@ -1,6 +1,6 @@
 ﻿using BoDi;
 using Hostmaker.Selenium.Pages;
-using Hostmaker.Selenium.Steps;
+using Hostmaker.Selenium.Tests.Steps;
 using Hostmaker.Selenium.Utility.Extensions;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;

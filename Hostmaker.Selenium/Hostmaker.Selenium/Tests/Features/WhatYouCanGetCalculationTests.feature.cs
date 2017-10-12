@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Hostmaker.Selenium.Features
+namespace Hostmaker.Selenium.Tests.Features
 {
     using TechTalk.SpecFlow;
     

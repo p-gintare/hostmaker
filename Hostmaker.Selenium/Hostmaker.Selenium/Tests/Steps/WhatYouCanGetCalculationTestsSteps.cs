@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 
-namespace Hostmaker.Selenium.Steps
+namespace Hostmaker.Selenium.Tests.Steps
 {
     [Binding]
     public class WhatYouCanGetCalculationTestsSteps : ScenarioContextBinding

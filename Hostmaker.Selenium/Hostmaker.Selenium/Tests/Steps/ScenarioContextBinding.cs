@@ -1,7 +1,7 @@
 ﻿using System;
 using TechTalk.SpecFlow;
 
-namespace Hostmaker.Selenium.Steps
+namespace Hostmaker.Selenium.Tests.Steps
 {
     public class ScenarioContextBinding : TechTalk.SpecFlow.Steps
     {

@@ -72,7 +72,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Features\WhatYouCanGetCalculationTests.feature.cs">
+    <Compile Include="Tests\Features\WhatYouCanGetCalculationTests.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>WhatYouCanGetCalculationTests.feature</DependentUpon>
@@ -82,8 +82,8 @@
     <Compile Include="Pages\Sections\WhatYouCouldEarnSection.cs" />
     <Compile Include="Pages\Sections\WhatYouCouldGetEstimateResultSection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Steps\ScenarioContextBinding.cs" />
-    <Compile Include="Steps\WhatYouCanGetCalculationTestsSteps.cs" />
+    <Compile Include="Tests\Steps\ScenarioContextBinding.cs" />
+    <Compile Include="Tests\Steps\WhatYouCanGetCalculationTestsSteps.cs" />
     <Compile Include="Utility\Bootstraper.cs" />
     <Compile Include="Utility\Browser.cs" />
     <Compile Include="Utility\WebDriverFactory.cs" />
@@ -94,7 +94,7 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Features\WhatYouCanGetCalculationTests.feature">
+    <None Include="Tests\Features\WhatYouCanGetCalculationTests.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WhatYouCanGetCalculationTests.feature.cs</LastGenOutput>
     </None>
