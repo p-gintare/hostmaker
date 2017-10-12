@@ -35,10 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BoDi, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BoDi.1.3.0\lib\net45\BoDi.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -83,10 +79,14 @@
     </Compile>
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\HomePage.cs" />
+    <Compile Include="Pages\Sections\WhatYouCouldEarnSection.cs" />
+    <Compile Include="Pages\Sections\WhatYouCouldGetEstimateResultSection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\ScenarioContextBinding.cs" />
     <Compile Include="Steps\WhatYouCanGetCalculationTestsSteps.cs" />
+    <Compile Include="Utility\Bootstraper.cs" />
     <Compile Include="Utility\Browser.cs" />
-    <Compile Include="Utility\DriverFactory.cs" />
+    <Compile Include="Utility\WebDriverFactory.cs" />
     <Compile Include="Utility\Extensions\WebDriverExtensions.cs" />
     <Compile Include="Utility\Extensions\WebElementExtensions.cs" />
     <Compile Include="Utility\HostmakerEnvironmentManager.cs" />

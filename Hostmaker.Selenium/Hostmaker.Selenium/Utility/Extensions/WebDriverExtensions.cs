@@ -16,7 +16,7 @@ namespace Hostmaker.Selenium.Utility.Extensions
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
         }
 
-        public static void TakeScreenshot(IWebDriver driver, string name)
+        public static void TakeScreenshot(this IWebDriver driver, string name)
         {
             var dir =
                 $@"{Directory.GetCurrentDirectory()}\Screenshots";
@@ -24,6 +24,7 @@ namespace Hostmaker.Selenium.Utility.Extensions
             Directory.CreateDirectory(dir);
             var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
             screenshot.SaveAsFile($@"{dir}\{name}.jpg", ScreenshotImageFormat.Jpeg);
+            Console.WriteLine($@"file: {dir}\{name}.jpg");
         }
     }
 }

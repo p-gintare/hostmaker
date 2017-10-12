@@ -67,9 +67,11 @@ namespace Hostmaker.Selenium.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("I can get my property estimate")]
+        [NUnit.Framework.CategoryAttribute("WindowMaximize")]
         public virtual void ICanGetMyPropertyEstimate()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I can get my property estimate", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I can get my property estimate", new string[] {
+                        "WindowMaximize"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8

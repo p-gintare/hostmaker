@@ -3,7 +3,7 @@
 	As a property owner
 	I want to be able to select my property address and bedroom number and get estimate what I can make
 
-
+@WindowMaximize
 Scenario: I can get my property estimate
 	Given I go to Hostmaker.co
 	When I enter my postcode 'N1 9 PD'

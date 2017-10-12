@@ -1,50 +1,62 @@
-﻿using TechTalk.SpecFlow;
+﻿using Hostmaker.Selenium.Pages;
+using NUnit.Framework;
+using TechTalk.SpecFlow;
 
 namespace Hostmaker.Selenium.Steps
 {
     [Binding]
-    public class WhatYouCanGetCalculationTestsSteps
+    public class WhatYouCanGetCalculationTestsSteps : ScenarioContextBinding
     {
+        private readonly IHomePage _homePage;
+
         [Given(@"I go to Hostmaker\.co")]
         public void GivenIGoToHostmaker_Co()
         {
-            ScenarioContext.Current.Pending();
+            _homePage.GoTo();
         }
 
         [When(@"I enter my postcode '(.*)'")]
-        public void WhenIEnterMyPostcode(string p0)
+        public void WhenIEnterMyPostcode(string postcode)
         {
-            ScenarioContext.Current.Pending();
+            _homePage.WhatYouCouldEarn.EnterPostcode(postcode);
         }
 
         [When(@"I select '(.*)' as my address")]
-        public void WhenISelectAsMyAddress(string p0)
+        public void WhenISelectAsMyAddress(string address)
         {
-            ScenarioContext.Current.Pending();
+            _homePage.WhatYouCouldEarn.SelectPropertyAddress(address);
         }
 
         [When(@"I select (.*) bedroom from the number of bedrooms option")]
-        public void WhenISelectBedroomFromTheNumberOfBedroomsOption(int p0)
+        public void WhenISelectBedroomFromTheNumberOfBedroomsOption(int bedroomNumber)
         {
-            ScenarioContext.Current.Pending();
+            _homePage.WhatYouCouldEarn.SelectBedrooms(bedroomNumber);
         }
 
         [When(@"I enter email address as '(.*)'")]
-        public void WhenIEnterEmailAddressAs(string p0)
+        public void WhenIEnterEmailAddressAs(string email)
         {
-            ScenarioContext.Current.Pending();
+            _homePage.WhatYouCouldEarn.EnterEmail(email);
         }
 
         [When(@"I click calculate")]
         public void WhenIClickCalculate()
         {
-            ScenarioContext.Current.Pending();
+            _homePage.WhatYouCouldEarn.CalculateIncome();
         }
 
         [Then(@"I should see the estimate we can make between (.*) and (.*)")]
-        public void ThenIShouldSeeTheEstimateWeCanMakeBetweenAnd(int p0, int p1)
+        public void ThenIShouldSeeTheEstimateWeCanMakeBetweenAnd(int fromValue, int toValue)
         {
-            ScenarioContext.Current.Pending();
+            var value = _homePage.WhatYouCouldEarnEstimate.GetEstimate();
+            Assert.Greater(value, fromValue, $"{value} should be greater than {fromValue}");
+            Assert.Less(value, toValue, $"{value} should be less than {toValue}");
+        }
+
+        public WhatYouCanGetCalculationTestsSteps(IHomePage homePage,
+            ScenarioContext scenarioContext) : base(scenarioContext)
+        {
+            _homePage = homePage;
         }
     }
 }
